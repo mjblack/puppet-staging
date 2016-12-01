@@ -79,7 +79,7 @@ define staging::extract (
   }
 
   case $name {
-    /.tar$/: {
+    /(.tar|.xz)$/: {
       $command = "tar xf ${source_path}${strip_opt}"
     }
 
